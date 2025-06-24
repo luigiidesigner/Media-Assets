@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Assets</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #121212;
+      color: #fff;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      columns: 2;
+      gap: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+      break-inside: avoid;
+    }
+    a {
+      color: #00d8ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧃 Media Assets / Motion 视频列表</h1>
+  <ul>
+    <!-- 自动生成的 001~065.mp4 链接 -->
+    <!-- 可根据实际数量复制扩展 -->
+    <!-- 如果你用 Node 自动生成，我也可以提供脚本 -->
+    <!-- 以下是简化版 -->
+    <!-- Start -->
+    <!-- 共 65 个视频，倒序排列 -->
+    <script>
+      const container = document.currentScript.parentElement;
+      for (let i = 65; i >= 1; i--) {
+        const filename = i.toString().padStart(3, '0') + '.mp4';
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `./Motion/${filename}`;
+        a.target = '_blank';
+        a.textContent = filename;
+        li.appendChild(a);
+        container.querySelector('ul').appendChild(li);
+      }
+    </script>
+    <!-- End -->
+  </ul>
+</body>
+</html>
